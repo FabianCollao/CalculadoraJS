@@ -3,7 +3,7 @@
     src: url(../font/digital-7.ttf);
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:570px) {
     #calculadora{
         width: 90%;
     }
