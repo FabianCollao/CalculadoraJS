@@ -24,7 +24,7 @@ body{
     margin-bottom: 0.5em;
     overflow: hidden;
     position:relative;
-    max-width: 10em ;
+    max-width: 100% ;
     min-width: auto
 }
 .calculadora-s2{
