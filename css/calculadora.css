@@ -19,25 +19,25 @@ body{
     max-width: 10em ;
     min-width: auto
 }
-#pantalla, #version,#nombre_calc{
+.calculadora #pantalla, .version,.nombre_calc{
     font-family: "Digital-7";
 }
-#nombre_calc{
+.calculadora .nombre_calc{
     color: #5846cef8;
     font-weight: 900;
     font-size: 1.2em;
     text-align: end;
 }
-#version{
+.calculadora .version{
     color: #e95a5a ;
     font-weight: bolder;
     font-size: 1.2em;
     text-size-adjust: auto;
 }
-.row{
+.calculadora .row{
     padding: 0.2em;
 }
-.col{
+.calculadora .col{
     width:3em ;
     margin-left: 0.2em;
     margin-right: 0.2em;;
@@ -54,16 +54,16 @@ body{
     left: 50%;
     top: 50%;
 }
-.btn-warning{
+.calculadora .btn-warning{
     color:#6e6807;
     font-weight: bold;
     font-size: 18px;
 }
-.btn-warning:hover{
+.calculadora .btn-warning:hover{
     color: rgb(250, 235, 100);
     background-color:#a88312 ;
     border-color: #a88312;
 }
-.btn{
+.calculadora .btn{
     font-weight: 400;
 }
