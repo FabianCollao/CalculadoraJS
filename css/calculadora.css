@@ -3,6 +3,12 @@
     src: url(../font/digital-7.ttf);
 }
 
+@media screen and (max-width:470px) {
+    #calculadora{
+        min-width: 90%;
+        max-width: 90%;
+    }
+}
 body{
     background: #206fca;
 }
@@ -91,7 +97,7 @@ body{
     margin-bottom: 0.5em;
     overflow: hidden;
     position:relative;
-    max-width: 10em ;
+    max-width: 100%;
     min-width: auto
 }
 .calculadora #pantalla,.calculadora-s2 #pantalla, .version,.nombre_calc{
