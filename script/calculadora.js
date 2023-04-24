@@ -1,6 +1,8 @@
 //Definimos constantes de la pantalla y todos los botones.
 const pantalla = document.getElementById("pantalla");
 const botones = document.querySelectorAll("button");
+const calculadora=document.getElementById("calculadora");
+
 
 //Funcion para agregar operador si no esta repetido.
 const agregarOperador = (operador) => {
@@ -23,6 +25,7 @@ function pantallaError(value){
 botones.forEach((boton) => {
   boton.addEventListener("click", () => {
     const botonPulsado = boton.value;
+    codigoSecreto();
     //Validaciones segun el boton pulsado
     if (boton.id === "igual") {
       //Intentamos ejecutar la operacion de la pantalla, si no aparece error
@@ -77,3 +80,10 @@ const botonesInput = (key) => {
 document.addEventListener("keydown", (event) => {
   botonesInput(event.key);
 });
+
+//Funcion para cambiar el color de la calculadora
+function codigoSecreto(){
+  if(pantalla.value=="/(+)/"){
+    calculadora.classList.toggle("calculadora-s2");
+  }
+}
