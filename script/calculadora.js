@@ -6,39 +6,6 @@ let codigoSecretoActivado = false;
 let bodyS2Active = false;
 
 
-//Funcion para agregar operador si no esta repetido.
-const agregarOperador = (operador) => {
-  if (pantalla.value.slice(-1).match(/[+\-*/]/)) {
-    pantalla.value = pantalla.value.slice(0, -1);
-  }
-  pantallaError(operador);
-};
-
-//Comprueba si el fondo del body es el original o el nuevo y lo cambia.
-function toggleBodyBackground() {
-  if (bodyS2Active) {
-    document.body.style.backgroundColor = '#206fca'; // Establecer el color de fondo original
-    bodyS2Active = false;
-  } else {
-    document.body.style.backgroundColor = '#df478e'; // Establecer el nuevo color de fondo
-    bodyS2Active = true;
-  }
-}
-//Funcion que agrega el boton pulsado sobre los mensajes de error.
-function pantallaError(value) {
-  if (pantalla.value == "ERROR!" || pantalla.value == "0" || pantalla.value == "NaN"||pantalla.value=="## codigo secreto ##") {
-    if(pantalla.value=="0"&&value=="."){
-      pantalla.value="0."
-    }else{
-      pantalla.value = value;
-    }
-  } else if (!codigoSecretoActivado) {
-    pantalla.value += value;
-  } else {
-    codigoSecretoActivado = false;
-  }
-  codigoSecreto(); // Llama a la función codigoSecreto aquí
-}
 
 //Recorremos el arreglo de los botones y les asignamos el evento Listener
 botones.forEach((boton) => {
@@ -74,6 +41,39 @@ botones.forEach((boton) => {
   });
 });
 
+//Funcion para agregar operador si no esta repetido.
+const agregarOperador = (operador) => {
+if (pantalla.value.slice(-1).match(/[+\-*/]/)) {
+  pantalla.value = pantalla.value.slice(0, -1);
+}
+pantallaError(operador);
+};
+
+//Comprueba si el fondo del body es el original o el nuevo y lo cambia.
+function toggleBodyBackground() {
+if (bodyS2Active) {
+  document.body.style.backgroundColor = '#206fca'; // Establecer el color de fondo original
+  bodyS2Active = false;
+} else {
+  document.body.style.backgroundColor = '#df478e'; // Establecer el nuevo color de fondo
+  bodyS2Active = true;
+}
+}
+//Funcion que agrega el boton pulsado sobre los mensajes de error.
+function pantallaError(value) {
+if (pantalla.value == "ERROR!" || pantalla.value == "0" || pantalla.value == "NaN"||pantalla.value=="## codigo secreto ##") {
+  if(pantalla.value=="0"&&value=="."){
+    pantalla.value="0."
+  }else{
+    pantalla.value = value;
+  }
+} else if (!codigoSecretoActivado) {
+  pantalla.value += value;
+} else {
+  codigoSecretoActivado = false;
+}
+codigoSecreto(); // Llama a la función codigoSecreto aquí
+}
 //Funcion de las teclas presionadas que necesitamos, con sus validaciones.
 const botonesInput = (key) => {
   if (key.match(/[+\-*/]/)) {
