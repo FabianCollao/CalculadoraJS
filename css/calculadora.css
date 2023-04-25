@@ -1,83 +1,100 @@
+/* Importamos la fuente con estilo digital */
 @font-face {
     font-family: "Digital-7";
     src: url(../font/digital-7.ttf);
 }
-
+/* Tamaño especial para verse desde dispositivos moviles */
 @media screen and (max-width:470px) {
     #calculadora{
         width: 90%;
     }
 }
-body{
+
+body {
     background: #206fca;
 }
 
 /*Diseño 1*/
 
-.calculadora-s2 #pantalla{
+.calculadora-s2 #pantalla {
     background-color: #410436;
     text-align: right;
-    color:white;
+    color: white;
     border-radius: 0.5em;
     font-size: 30px;
     padding: 5%;
     margin-bottom: 0.5em;
     overflow: hidden;
-    position:relative;
-    max-width: 100% ;
+    position: relative;
+    max-width: 100%;
     min-width: auto
 }
-.calculadora-s2{
+
+.calculadora-s2 {
     position: fixed;
     padding: 1em;
     border-radius: 0.7em;
-    background:linear-gradient(270deg,  #b700ff,#df478e);
-    box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.2),2px 2px 2px 5px rgba(0, 0, 0, 0.3),0px 2px 2px 6px rgba(0, 0, 0, 0.315);
-    transform: translate(-50%,-50%);
+    background: linear-gradient(270deg, #b700ff, #df478e);
+    box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.2), 2px 2px 2px 5px rgba(0, 0, 0, 0.3), 0px 2px 2px 6px rgba(0, 0, 0, 0.315);
+    transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
 }
 
-.calculadora-s2 .btn{
+.calculadora-s2 .btn {
     background-image: radial-gradient(circle at 50% -20.71%, #ff7a86 0, #ff6a84 16.67%, #ff567f 33.33%, #f23c78 50%, #e21972 66.67%, #d3006f 83.33%, #c7006f 100%);
     border: 2px solid;
-    border-radius:6px;
-  }
-.calculadora-s2 #operation,.calculadora-s2 #raiz{
+    border-radius: 6px;
+}
+
+.calculadora-s2 #operation,
+.calculadora-s2 #raiz {
     background-image: linear-gradient(180deg, #557673 0, #3e6967 25%, #1f5959 50%, #00494c 75%, #003c43 100%);
 }
-.calculadora-s2 .btn-primary{
+
+.calculadora-s2 .btn-primary {
     background-image: radial-gradient(circle at 50.83% 45.29%, #0070ff 0, #0069ff 10%, #0061ff 20%, #0057ff 30%, #4a4bfe 40%, #783cf2 50%, #9727e5 60%, #ae00d6 70%, #c100c6 80%, #d000b5 90%, #dc00a3 100%);
 }
-.calculadora-s2 #ce{
-    background-image: radial-gradient(circle at 50% -20.71%, #ff6f46 , #d20038 );
+
+.calculadora-s2 #ce {
+    background-image: radial-gradient(circle at 50% -20.71%, #ff6f46, #d20038);
 }
-.calculadora-s2 #borrar{
+
+.calculadora-s2 #borrar {
     background: linear-gradient(180deg, #fffd9b 0, #ffeb87 16.67%, #ffd66f 33.33%, #f2bd53 50%, #e3a437 66.67%, #d78f1f 83.33%, #cf7c07 100%);
-    border:white 2px solid;
+    border: white 2px solid;
 }
-.calculadora-s2 #punto{
+
+.calculadora-s2 #punto {
     background-image: linear-gradient(180deg, #ffbab2 0, #fcada8 25%, #f29d9d 50%, #e88d93 75%, #de808b 100%);
-    color:#4b0526 !important;
+    color: #4b0526 !important;
     font-weight: bolder;
 }
-.calculadora-s2 .row{
+
+.calculadora-s2 .row {
     padding: 0.2em;
 }
-.calculadora-s2 .col{
-    width:3em ;
+
+.calculadora-s2 .btn:hover {
+    opacity: 0.7;
+}
+
+.calculadora-s2 .col {
+    width: 3em;
     margin-left: 0.2em;
-    margin-right: 0.2em;;
+    margin-right: 0.2em;
+    ;
     border-radius: 0.5em;
 }
 
-.calculadora-s2 .nombre_calc{
-    color: #e4a2f8 !important ;
+.calculadora-s2 .nombre_calc {
+    color: #e4a2f8 !important;
     font-weight: 900;
     font-size: 1.2em;
     text-align: end;
 }
-.calculadora-s2 .version{
+
+.calculadora-s2 .version {
     color: #ded3e2 !important;
     font-weight: bolder;
     font-size: 1.2em;
@@ -86,65 +103,76 @@ body{
 
 
 /* Diseño 2 */
-#pantalla{
+#pantalla {
     background-color: #0e1b30;
     text-align: right;
-    color:white;
+    color: white;
     border-radius: 0.5em;
     font-size: 30px;
     padding: 5%;
     margin-bottom: 0.5em;
     overflow: hidden;
-    position:relative;
+    position: relative;
     max-width: 100%;
     min-width: auto
 }
-.calculadora #pantalla,.calculadora-s2 #pantalla, .version,.nombre_calc{
+
+.calculadora #pantalla,
+.calculadora-s2 #pantalla,
+.version,
+.nombre_calc {
     font-family: "Digital-7";
 }
-.calculadora .nombre_calc{
+
+.calculadora .nombre_calc {
     color: #8d87b3f8;
     font-weight: 900;
     font-size: 1.4em;
     text-align: end;
 }
-.calculadora .version{
-    color: #e95a5a ;
+
+.calculadora .version {
+    color: #e95a5a;
     font-weight: bolder;
     font-size: 1.4em;
     text-size-adjust: auto;
 }
-.calculadora .row{
+
+.calculadora .row {
     padding: 0.2em;
 }
-.calculadora .col{
-    width:3em ;
+
+.calculadora .col {
+    width: 3em;
     margin-left: 0.2em;
-    margin-right: 0.2em;;
+    margin-right: 0.2em;
     border-radius: 0.5em;
 }
-.calculadora{
+
+.calculadora {
     position: fixed;
     padding: 1em;
     border-radius: 0.7em;
     background-color: #323647;
-    box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.2),2px 2px 2px 5px rgba(0, 0, 0, 0.3),0px 2px 2px 6px rgba(0, 0, 0, 0.315);
-    transform: translate(-50%,-50%);
+    box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.2), 2px 2px 2px 5px rgba(0, 0, 0, 0.3), 0px 2px 2px 6px rgba(0, 0, 0, 0.315);
+    transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
 }
-.calculadora .btn-warning{
-    color:#3d3a02;
+
+.calculadora .btn-warning {
+    color: #3d3a02;
     font-weight: bold;
     font-size: 18px;
 }
-.calculadora .btn-warning:hover{
+
+.calculadora .btn-warning:hover {
     color: rgb(250, 235, 100);
-    background-color:#a88312 ;
+    background-color: #a88312;
     border-color: #a88312;
 }
-.calculadora .btn{
-    font-weight: 400;
-    border:#9dadce 2px solid;
-}
 
+.calculadora .btn {
+    font-weight: 400;
+    border: #9dadce 2px solid;
+}
