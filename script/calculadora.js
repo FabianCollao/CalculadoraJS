@@ -1,5 +1,6 @@
 //Definimos constantes de la pantalla y todos los botones.
 const pantalla = document.getElementById("pantalla");
+//obtenemos todos los botones y las guardamos en un arreglo
 const botones = document.querySelectorAll("button");
 const calculadora = document.getElementById("calculadora");
 let codigoSecretoActivado = false;
@@ -15,8 +16,10 @@ botones.forEach((boton) => {
     if (boton.id === "igual") {
       //Intentamos ejecutar la operacion de la pantalla, si no aparece error
       try {
-        const resultado = eval(pantalla.value);
-        pantalla.value = parseFloat(resultado.toFixed(3));
+        pantalla.value= pantalla.value.replace(/,/g,"");//Quitamos las comas para calcular la pantalla
+        const resultado = eval(pantalla.value);//calculamos lo que este en pantalla
+        pantalla.value = parseFloat(resultado.toFixed(3));//obtenemos los decimales
+        pantalla.value = Number(pantalla.value).toLocaleString('es-MX');//Resultado en pantalla con el separador de comas
       } catch (error) {
         pantalla.value = "ERROR!";
       }
@@ -29,7 +32,9 @@ botones.forEach((boton) => {
     } else if (boton.id === "raiz") {
       //Calcular raiz solo si no hay un error
       if (pantalla.value != "ERROR!") {
+        pantalla.value= pantalla.value.replace(/,/g,"");//Quitamos las comas para calcular la pantalla
         pantalla.value = Math.sqrt(parseFloat(pantalla.value)).toFixed(1);
+        pantalla.value = Number(pantalla.value).toLocaleString('es-MX');//Resultado en pantalla con el separador de comas
       }
     } else if (boton.textContent.match(/[+\-*/]/)) {
       //Ingresamos operador solo si no esta repetido
