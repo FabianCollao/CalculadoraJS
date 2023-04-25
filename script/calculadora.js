@@ -103,7 +103,6 @@ document.addEventListener("keydown", (event) => {
 function codigoSecreto() {
   if (pantalla.value == "/(+)/") {
     calculadora.classList.toggle("calculadora-s2");
-    document.body.classList.toggle("body-s2");
     pantalla.value = "## codigo secreto ##";
     codigoSecretoActivado = true;
     toggleBodyBackground();
